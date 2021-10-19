@@ -1,0 +1,195 @@
+@import "./partials/_reset";
+@import "./partials/_variables";
+@import "./partials/_mixins";
+@import "./partials/_global";
+
+///////////////////////////////////////
+//          EVENTOS MAIN
+//
+
+main {
+    text-align: center;
+}
+
+//      > Head
+
+.head {
+    padding: 0 2rem;
+
+    &__subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+//       >> Email CTA
+
+.emailCTA {
+    background-color: $backgroundLight;
+    max-width: 26rem;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &__form {
+        display: flex;
+        margin: 1.5rem 0 0.5rem 0;
+        position: absolute;
+        z-index: 99;
+        width: calc(100% - 4rem);
+        left: 2rem;
+        opacity: 0;
+        transition: opacity 250ms ease-out;
+    }
+    &__email {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    &__submit {
+        padding: 0 0.7rem;
+        margin-left: 0.5rem;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 3px;
+        border: 2px solid $primary;
+        color: $primary;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 150ms, color 150ms;
+
+        &:hover {
+            background-color: $primary;
+            color: $textLight;
+        }
+    }
+    .emptyDiv {
+        height: 0;
+        transition: height 150ms ease-out;
+    }
+    &:hover,
+    &:focus-within {
+        .emptyDiv {
+            height: 4.5rem;
+        }
+        .emailCTA__form {
+            opacity: 1;
+        }
+    }
+
+}
+
+
+///////////////////////////////////////
+//          TARJETAS
+//
+
+.events {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.eventCard {
+    background-color: $backgroundLight;
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: transform 150ms ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &__img {
+        height: 10rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+
+        // Carga de imagenes de fondo
+        @each $imagen in peli, rumba, poker, techo, vinos {
+            &--#{$imagen}{background: url(../img/#{$imagen}.jpg) no-repeat center / cover;}
+        }
+    }
+    &__content {
+        padding: 1rem;
+        text-align: left;
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    &__date,
+    &__time {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    &__time--mini {
+        font-size: 0.8em;
+    }
+    &__desc {
+        margin: 2rem 0 1rem 0;
+    }
+    &__cta {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 0.2rem;
+        color: $primary;
+        border: 1px solid $primary;
+        transition: color 150ms, background-color 150ms;
+        &:not(.eventCard__cta--pasado):hover {
+            &:hover {
+                color: $textLight;
+                background-color: $primary;
+            }
+            &:active {
+                background-color: $secondary;
+            }
+        }
+        &--pasado {
+            border-color: gray;
+            background-color: gray;
+            color: $textLight;
+        }
+    }
+}
+
+
+///////////////////////////////////////
+//          MEDIA QUERIES
+//
+
+@include mq_mobile {
+    .head__subtitle {
+        font-size: 1.25rem;
+    }
+    .events {
+        grid-template-columns: minmax(15rem, 1fr);
+    }
+    .emailCTA__form {
+        flex-direction: column;
+    }
+    .emailCTA__submit {
+        margin: 0.5rem 0 0 0;
+        padding: 0.5rem;
+    }
+    .emailCTA {
+        &:hover .emptyDiv,
+        &:focus-within .emptyDiv{
+            height: 7rem;
+            }
+    }
+}

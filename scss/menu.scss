@@ -1,0 +1,172 @@
+@import "./partials/_reset";
+@import "./partials/_variables";
+@import "./partials/_mixins";
+@import "./partials/_global";
+
+// Variables locales
+$sectionTitle: 3rem;
+$customBackground: #e6cda7;
+
+// Estilos
+main {
+    background-color: $customBackground;
+    text-align: center;
+    .pageTitle {
+        font-family: $fontSecondary;
+        font-weight: bold;
+        color: $backgroundLight;
+        font-size: 6rem;
+        padding: 0;
+        margin-bottom: 5rem;
+        opacity: 0.7;
+    }
+}
+#socialIcons {
+    background-color: $customBackground;
+}
+
+.section {
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: auto;
+
+    &__title {
+        font-family: $fontSecondary;
+        font-size: $sectionTitle;
+        line-height: 1.75em;
+    }
+}
+
+.list {
+    background-color: $backgroundLight;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.8;
+        @include placeTitle(-0.95em);
+
+        &--gourmet {
+            @include placeTitle(-0.9em);
+            font-weight: 600;
+        }
+    }
+
+    // Menu de panchos gourmet (#top)
+    &--gourmet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding-top: $sectionTitle + 1.5rem;
+        text-align: left;
+        margin: auto;
+    }
+    &__burger {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: normal;
+        margin-bottom: 0.6em;
+    }
+    &__description {
+        font-size: 0.9rem;
+        // font-weight: 500;
+    }
+
+    &__item {
+        padding: 0.2em 0;
+    }
+}
+
+#top li {
+    border: 1px solid $textDark;
+    border-radius: 0.4rem;
+    padding: 1rem 3rem;
+    text-align: center;
+
+    // Esto es para alinear verticalmente el texto dentro del recuadro.
+    // Grid > align-items: stretch para que todos los recuadros tengan el height de la fila.
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// Menu 'disena tu propio pancho'
+#bottom {
+    .list {
+        padding-top: 3rem;
+    }
+    .section__title {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        margin: 7rem 0 4rem 0;
+
+        span {
+            font-size: 2.5em;
+            color: $secondary;
+            transform: translateX(-0.1em);
+        }
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 2rem;
+        #aderezos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #toppings {
+            grid-column: 1/4;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+// Media queries
+@include mq_smallDesktop {
+    #top .list--gourmet {
+        grid-template-columns: 1fr 1fr;
+    }
+    #bottom .wrapper {
+        grid-template-columns: 1fr 1fr;
+        #aderezos {
+            grid-column: 1/3;
+        }
+        #toppings {
+            grid-column: 1/3;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include mq_tablet {
+    #top .list--gourmet {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include mq_mobile {
+    .section__title {
+        font-size: 9vw;
+    }
+    #top li {
+        padding: 1rem 1.5rem;
+    }
+    #bottom .wrapper {
+        grid-template-columns: 1fr;
+        ul {
+            grid-column: 1/3;
+        }
+        #aderezos,
+        #toppings {
+            grid-template-columns: 1fr;
+        }
+    }
+}
