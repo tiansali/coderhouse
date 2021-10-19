@@ -4,9 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le Pancherie - Panchos Gourmet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body  class="bg-warning" style="--bs-bg-opacity: .2;">
     
+    <!-- TOP NAVIGATION HEADER-->
+    <div class="container-fluid shadow">
+
+        <!-- Logo -->
+        <div class="row justify-content-center pt-5 pb-2">
+            <div class="col-8 col-sm-6 col-md-4 col-lg-3 text-center">
+                <h1 class="fw-bold fst-italic"><a href="#" class="link-dark text-decoration-none">Le Pancherie</a></h1>
+            </div>
+        </div>
+        <div class="row justify-content-center pb-5">
+            <div class="col-4 col-sm-3 col-md-2">
+                <a href="#"><img src="./img/logo_colored.png" alt="Logo" class="img-fluid"></a>
+            </div>
+        </div>
+
+        <!-- Nav Menu (toggle) -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse justify-content-center align-center" id="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item fw-bold"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item fw-bold"><a class="nav-link" href="#eventos">Eventos</a></li>
+                        <li class="nav-item fw-bold"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item fw-bold"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="container text-center fst-italic">
+            <div class="row justify-content-center">
+                <div class="p-3 col-sm-10 col-md-8 col-lg-6">
+                    <p class="lead my-5">Si tu amor por el pancho trasciende el miedo a lo desconocido, si crees que la grandeza puede surgir de los orígenes más humildes... te invitamos a conocer todo lo que podía ser un pancho, y no lo sabías.</p>
+                    <p class="lead my-5 text-danger fw-bold">La escencia del pancho, llevada a otro nivel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <!-- Carousel -->
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center">
+            <div class="col-9 col-sm-8 col-md-6 col-lg-5">
+                <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <img src="./img/ratatouille.png" class="d-block w-100" alt="Premio Ratatouille">
+                                    </div>
+                                    <div class="col">
+                                        <p>Reconocimiento Culinario Ratatouille 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <img src="./img/oscar.png" class="d-block w-100" alt="Premio Oscar al mejor pancho">
+                                    </div>
+                                    <div class="col">
+                                        <p>Premio Oscar al mejor pancho 2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <img src="./img/lanata.png" class="d-block w-100" alt="El mejor pancho que probo Lanata">
+                                    </div>
+                                    <div class="col">
+                                        <p><span class="fst-italic"></span>“El mejor pancho que probé en mi vida”</span> <br>
+                                        -Jorge Lanata</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev pe-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next ps-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <section id="cta" class="bg-white p-5">
+        <div class="container-md text-center fs-3 fst-italic">
+            <p>Elegí entre nuestra selección de <span class="text-danger fw-bold">panchos gourmet</span></p>
+            <p>o <span class="text-danger fw-bold mb-5">diseñá tu propio pancho</span>, y nosotros lo hacemos.</p>
+            <a href="#" class="fst-normal text-uppercase btn btn-outline-danger btn-lg mt-5">¡Reservá ahora!</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <!-- Mail List -->
+        <div class="container-fluid bg-warning">
+            <div class="container px-5 px-sm-0">
+                <form action="" class="row justify-content-center text-center">
+                    <div class="col-12 col-sm-auto p-0 my-3 mx-1">
+                        <label for="email" class="form-label lead text-light fs-4">¡Suscribite al newsletter!</label>
+                    </div>
+                    <div class="col-12 col-sm-auto p-0 my-3 mx-1">
+                        <input type="email" class="form-control d-inline-block" id="email" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <div class="col-12 col-sm-auto p-0 my-3 mx-1">
+                        <input type="submit" class="btn btn-outline-light" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Pie de pagina -->
+        <div class="container-fluid p-0 bg-dark overflow-hidden">
+            <div class="row">
+                
+                <!-- nav -->
+                <div class="col-12 col-sm-4 col-lg-2 px-0 my-auto order-sm-2">
+                    <ul class="px-5 px-sm-2 py-4 order-sm-1">
+                        <li><a href="#" class="link-light text-decoration-none"><small>Inicio</small></a></li>
+                        <li><a href="#" class="link-light text-decoration-none"><small>Menu</small></a></li>
+                        <li><a href="#" class="link-light text-decoration-none"><small>Eventos</small></a></li>
+                        <li><a href="#" class="link-light text-decoration-none"><small>Nosotros</small></a></li>
+                        <li><a href="#" class="link-light text-decoration-none"><small>Contactos</small></a></li>
+                    </ul>
+                </div>
+
+                <!-- map -->
+                <div class="col-12 col-sm-8 col-lg-6 pe-3 order-sm-1">
+                    <img src="./img/map.jpg" alt="Mapa" class="img-fluid">
+                </div>
+
+                <!-- Logo & copyright -->
+                <!-- para pantallas lg > bacground DARK -->
+                <div class="col-12 d-lg-none col-lg-3 text-center px-0 py-4 my-auto bg-black order-sm-3">
+                    <h2 class="display-6 fst-italic text-light fw-bold">Le Pancherie</h2>
+                    <small class="text-light">Le Pancherie © Todos los derechos reservados</small>
+                </div>
+                <!-- para pantallas menores > bacground BLACK -->
+                <div class="d-none d-lg-block col-lg-3 text-center px-0 py-4 my-auto order-sm-3">
+                    <h2 class="display-6 fst-italic text-light fw-bold">Le Pancherie</h2>
+                    <small class="text-light">Le Pancherie © Todos los derechos reservados</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
