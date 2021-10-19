@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Pancherie - Contacto</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><h1><i>Le Pancherie</i></h1></a>
+        <nav>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="el-lugar.html">El lugar</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="eventos.html">Eventos (tabla)</a></li>
+                <li><a href="contacto.html">Contacto (form)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Contacto</h2>
+<!-- 
+******************************************
+    Uso divs para organizar el layout (como hizo el profe).
+    Entiendo que mas adelante lo organizaria con CSS.
+******************************************
+ -->
+    <form action="#">
+        <fieldset>
+            <legend>Ingresa tus datos</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ej.: Pancho" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Ej.: pancho@gmail.com" required>
+            </div>
+            <div>
+                <label for="mail-list">Deseo recibir noticias sobre Le Pancherie</label>
+                <input type="checkbox" name="mail-list" value="1">
+            </div>
+            <div>
+                <label for="amor">Nivel de amor por el pancho:</label>
+                <select name="amor" id="amor">
+                    <option value="1">Alto</option>
+                    <option value="2">Muy alto</option>
+                    <option value="3">Altisimo</option>
+                    <option value="4">Inconmensurable</option>
+                </select>
+            </div>
+            <label for="mensaje">Escribe tu mensaje:</label><br>
+            <textarea name="mensaje" id="mensaje" cols="40" rows="10"></textarea>
+            <div>
+                <input type="reset" value="Limpiar formulario">
+                <input type="submit" value="Enviar">
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
