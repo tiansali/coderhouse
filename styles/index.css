@@ -1,0 +1,11 @@
+.hero__title, .hero__text{
+    color: rgb(224, 105, 0);
+}
+
+.hero__slogan {
+    color: #b12020;
+}
+
+#desarrollo h3 {
+    color: rgba(224, 104, 0, 0.822);
+}
