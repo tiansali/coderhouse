@@ -1,0 +1,152 @@
+section {
+    padding: 4rem 1rem;
+}
+
+
+/****************************************
+
+    HERO
+
+****************************************/
+
+
+.hero {
+    font-family: 'Lobster Two', cursive;
+    font-style: italic;
+    font-size: 1.75rem;
+    line-height: 230%;
+    padding: 7rem 3rem 10rem 3rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.hero__text {
+    margin-bottom: 6rem;
+}
+
+.hero__slogan{
+    display: inline-block;
+    color: #E33700;
+    font-weight: 700;
+}
+
+
+/****************************************
+
+    TESTIMONIALS
+
+****************************************/
+
+.testimonials {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonialCard {
+    padding: 2rem;
+    max-width: 30%;
+    vertical-align: middle;
+}
+
+.testimonialCard__img {
+    max-height: 150px;
+}
+
+
+/* algunos arreglos para compensar por los diferentes tamaños de imagenes */
+.testimonialCard .rata {
+    max-height: 130px;
+    margin-bottom: 10px;
+}
+
+.testimonialCard .oscar {
+    max-height: 130px;
+    margin-bottom: 10px;
+}
+
+.testimonialCard .lanata {
+    margin-bottom: -10px;
+}
+
+.testimonialCard__text {
+    padding-top: 1rem;
+    font-weight: 500;
+}
+/*****/
+
+/****************************************
+
+    Call to Action
+
+****************************************/
+
+.cta {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10rem 2rem;
+}
+
+.cta__text {
+    font-family: 'Lobster Two', cursive;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.cta__text--color {
+    display: inline-block;
+    color: #E33700;
+}
+
+.cta__button, .cta__button:visited {
+    color: #E33700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid #E33700;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
+.cta__button:hover {
+    background-color: #E33700;
+    color: white;
+}
+
+/* @media screen and (max-width: 768px){
+    .testimonialCard .rata, .testimonialCard .oscar {
+        max-height: 100px;
+    }
+    .testimonialCard .lanata {
+        max-height: 120px;
+        position: relative;
+        top: -8px;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        font-size: 1.5rem;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .testimonialCard {
+        max-width: 100%;
+    }
+    .testimonialCard .rata, .testimonialCard .oscar, .testimonialCard .lanata{
+        max-width: 80%;
+        max-height: 250px;
+    }
+
+    .cta__text {
+        font-size: 1.5rem;
+    }
+    .cta__button {
+        font-size: 1.25rem;
+    }
+}
+

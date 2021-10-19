@@ -1,0 +1,169 @@
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+
+/***************************
+
+    E-Mail Call to Action
+
+***************************/
+
+.title {
+    padding: 0 2rem;
+}
+
+.emailCTA {
+    background-color: rgba(255, 255, 255, .7);
+    max-width: 26rem;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.emailCTA form {
+    display: none;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.emailCTA input[type=email] {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+
+.emailCTA input[type=submit] {
+    padding: 0 0.7rem;
+    margin-left: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 3px;
+    border: 2px solid #F09B1A;
+    color: #F09B1A;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.emailCTA input[type=submit]:hover {
+    background-color: #F09B1A;
+    color: white;
+}
+
+.emailCTA:hover form, .emailCTA:focus-within form {
+    display: flex;
+}
+
+
+/***************************
+
+    Event Cards
+
+***************************/
+
+.events {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    /* justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+.eventCard {
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    /* flex: 1 1 22rem; */
+    /* max-width: 32rem; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.eventCard__img {
+    background: url(https://picsum.photos/300/500) no-repeat center / cover;
+    height: 10rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.eventCard__content {
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.eventCard__title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.eventCard__date, .eventCard__time {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.eventCard__time .mini {
+    font-size: 0.8em;
+}
+
+.eventCard__desc {
+    margin: 2rem 0 1rem 0;
+}
+
+.eventCard__cta {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    color: #F09B1A;
+    border: 1px solid #F09B1A;
+}
+
+.eventCard__cta:hover:not(.eventCard__cta--pasado) {
+    color: white;
+    background-color: #F09B1A;
+}
+
+.eventCard__cta:active:not(.eventCard__cta--pasado) {
+    background-color: #BA4200;
+}
+
+.eventCard__cta--pasado {
+    border-color: gray;
+    background-color: gray;
+    color: white;
+}
+
+
+/***************************
+
+    MEDIA QUERIES
+
+***************************/
+
+@media screen and (max-width: 425px) {
+    .title .subtitle {
+        font-size: 1.25rem;
+    }
+    .events {
+        grid-template-columns: minmax(15rem, 1fr);
+    }
+    .emailCTA form {
+        flex-direction: column;
+    }
+    .emailCTA input[type=submit] {
+        margin: 0.5rem 0 0 0;
+        padding: 0.5rem;
+    }
+}
