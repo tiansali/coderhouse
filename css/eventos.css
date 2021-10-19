@@ -1,0 +1,193 @@
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+
+/***************************
+
+    E-Mail Call to Action
+
+***************************/
+
+.title {
+    padding: 0 2rem;
+}
+
+.emailCTA {
+    background-color: rgba(255, 255, 255, .7);
+    max-width: 26rem;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.empty {
+    height: 0;
+    transition: all 150ms ease-out;
+}
+
+.emailCTA form {
+    display: flex;
+    margin: 1.5rem 0 0.5rem 0;
+    position: absolute;
+    z-index: 99;
+    width: calc(100% - 4rem);
+    left: 2rem;
+    opacity: 0;
+    transition: opacity 250ms 150ms;
+}
+
+.emailCTA input[type=email] {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+
+.emailCTA input[type=submit] {
+    padding: 0 0.7rem;
+    margin-left: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 3px;
+    border: 2px solid #F09B1A;
+    color: #F09B1A;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 150ms;
+}
+
+.emailCTA input[type=submit]:hover {
+    background-color: #F09B1A;
+    color: white;
+}
+
+.emailCTA:hover .empty, .emailCTA:focus-within .empty{
+    height: 4.5rem;
+}
+
+.emailCTA:hover form, .emailCTA:focus-within form {
+    opacity: 1;
+}
+
+/***************************
+
+Event Cards
+
+***************************/
+
+.events {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+.eventCard {
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: transform 150ms ease-out;
+}
+
+.eventCard:hover {
+    transform: scale(1.05);
+}
+
+.eventCard__img {
+    height: 10rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Carga de imagenes de cada tarjeta */
+.peli .eventCard__img {background: url(../img/movie.jpg) no-repeat center / cover;}
+.rumba .eventCard__img {background: url(../img/rumba.jpg) no-repeat center / cover;}
+.poker .eventCard__img {background: url(../img/poker.jpg) no-repeat center / cover;}
+.techo .eventCard__img {background: url(../img/techo.jpg) no-repeat center / cover;}
+.vinos .eventCard__img {background: url(../img/vinos.jpg) no-repeat center / cover;}
+
+.eventCard__content {
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.eventCard__title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.eventCard__date, .eventCard__time {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.eventCard__time .mini {
+    font-size: 0.8em;
+}
+
+.eventCard__desc {
+    margin: 2rem 0 1rem 0;
+}
+
+.eventCard__cta {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    color: #F09B1A;
+    border: 1px solid #F09B1A;
+    transition: all 150ms;
+}
+
+.eventCard__cta:hover:not(.eventCard__cta--pasado) {
+    color: white;
+    background-color: #F09B1A;
+}
+
+.eventCard__cta:active:not(.eventCard__cta--pasado) {
+    background-color: #BA4200;
+}
+
+.eventCard__cta--pasado {
+    border-color: gray;
+    background-color: gray;
+    color: white;
+}
+
+
+/***************************
+
+    MEDIA QUERIES
+
+***************************/
+
+@media screen and (max-width: 425px) {
+    .title .subtitle {
+        font-size: 1.25rem;
+    }
+    .events {
+        grid-template-columns: minmax(15rem, 1fr);
+    }
+    .emailCTA form {
+        flex-direction: column;
+    }
+    .emailCTA input[type=submit] {
+        margin: 0.5rem 0 0 0;
+        padding: 0.5rem;
+    }
+}
