@@ -4,9 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le Pancherie - Panchos Gourmet</title>
+    <link rel="icon" href="./img/browser-icon.png">
+    <link rel="stylesheet" href="./scss/index.css">
 </head>
 <body>
-    
+    <!----------------------------------
+                HEADER GLOBAL
+    -->
+    <header id="headerGlobal">
+        <h1> <a href="#">Le Pancherie</a></h1>
+        <a href="#"><img src="img/logo.png" alt="Le Pancherie" class="headerLogo"></a>
+        <nav class="headerMenu">
+            <ul class="headerMenu__list">
+                <li class="headerMenu__item"><a href="html/menu.html">Menu</a></li>
+                <li class="headerMenu__item"><a href="html/eventos.html">Eventos</a></li>
+                <li class="headerMenu__item"><a href="html/nosotros.html">Nosotros</a></li>
+                <li class="headerMenu__item"><a href="html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!----------------------------------
+        CUERPO PRINCIPAL> index.html
+    -->
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <p class="hero__text">Si tu amor por el pancho trasciende el miedo a lo desconocido, si crees que la grandeza puede surgir de los orígenes más humildes... te invitamos a conocer todo lo que podía ser un pancho, y no lo sabías.
+            </p>
+            <p class="hero__slogan"><strong>La escencia del pancho,</strong></p>
+            <p class="hero__slogan"><strong> llevada a otro nivel.</strong></p>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <div class="testimonialCard">
+                <img src="img/ratatouille.png" alt="Reconocimiento Ratatouille" class="testimonialCard__img rata">
+                <p class="testimonialCard__text">Reconocimiento Culinario
+                    Ratatouille 2020</p>
+            </div>
+            <div class="testimonialCard">
+                <img src="img/oscar.png" alt="Premio Oscar" class="testimonialCard__img oscar">
+                <p class="testimonialCard__text">Premio Oscar
+                    al mejor pancho 2019</p>
+            </div>
+            <div class="testimonialCard">
+                <img src="img/lanata.png" alt="Lanata" class="testimonialCard__img lanata">
+                <p class="testimonialCard__text"><em>“El mejor pancho que probé en mi vida”</em>
+                    <br>-Jorge Lanata</p>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section id="cta" class="cta">
+            <p class="cta__text">
+                Elegí entre nuestra selección de <span class="cta__text--color">panchos gourmet</span> <br>
+                o <span class="cta__text--color">diseñá tu propio pancho</span>, y nosotros lo hacemos.
+            </p>
+            <a href="./html/contacto.html" class="cta__button">¡RESERVÁ AHORA!</a>
+        </section>
+    </main>
+    <!----------------------------------
+                FOOTER GLOBAL
+    -->
+    <footer id="footerGlobal">
+        <!-- Social Icons -->
+        <section id="socialIcons" class="socialIcons">
+            <ul class="socialIcons__list">
+                <li><a href="#"><img src="img/twitterIcon.svg" alt="Twitter"></a></li>
+                <li><a href="#"><img src="img/facebookIcon.svg" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/instagramIcon.svg" alt="Instagram"></a></li>
+                <li><a href="#"><img src="img/youtubeIcon.svg" alt="Youtube"></a></li>
+            </ul>
+        </section>
+        <!-- Newsletter -->
+        <section id="mailingList">
+            <form action="" class="form">
+                <label for="email" class="form__label">¡Suscribite al newsletter!</label>
+                <input type="email" name="email" placeholder="ejemplo@gmail.com" class="form__input form__email">
+                <input type="submit" value="ENVIAR" class="form__input form__submit">
+            </form>
+        </section>
+        <section id="bottomContainer" class="bottomContainer"> <!-- Contiene tres columnas -->
+            <div class="bottomContainer__left">
+                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
+                    <img src="./img/map.jpg" alt="Google Maps" class="footerMap">
+                </a>
+            </div>
+            <div class="bottomContainer__center">
+                <nav class="footerMenu">
+                    <ul class="footerMenu__list">
+                        <li class="footerMenu__item"><a href="#">Inicio</a></li>
+                        <li class="footerMenu__item"><a href="./html/menu.html">Menu</a></li>
+                        <li class="footerMenu__item"><a href="./html/eventos.html">Eventos</a></li>
+                        <li class="footerMenu__item"><a href="./html/nosotros.html">Nosotros</a></li>
+                        <li class="footerMenu__item"><a href="./html/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <p class="contactInfo">
+                    12 de Octubre 1428<br>
+                    (esq. O'Connor)<br>
+                    Bariloche, Arg.<br><br>
+                    +54 9 2944 537802
+                </p>
+            </div>
+            <div class="bottomContainer__right">
+                <h2>Le Pancherie</h2>
+                <p>Le Pancherie © Todos los derechos reservados</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

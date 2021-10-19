@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Panchrie - Menu</title>
+    <link rel="stylesheet" href="../scss/globalStyles.css">
+</head>
+<body>
+    <!----------------------------------
+                HEADER GLOBAL
+    ------------------------------------>
+    <header id="headerGlobal">
+        <h1> <a href="../index.html">Le Pancherie</a></h1>
+        <a href="../index.html"><img src="../img/logo.png" alt="Le Pancherie" class="headerLogo"></a>
+        <nav class="headerMenu">
+            <ul class="headerMenu__list">
+                <li class="headerMenu__item"><a class="currentPage" href="#">Menu</a></li>
+                <li class="headerMenu__item"><a href="./eventos.html">Eventos</a></li>
+                <li class="headerMenu__item"><a href="./nosotros.html">Nosotros</a></li>
+                <li class="headerMenu__item"><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!----------------------------------
+                CUERPO PRINCIPAL> menu.html
+    ------------------------------------>
+    <main>
+        <h2>MENU</h2>
+    </main>
+    <!----------------------------------
+                FOOTER GLOBAL
+    ------------------------------------>
+    <footer id="footerGlobal">
+        <!-- Social Icons -->
+        <section id="socialIcons" class="socialIcons">
+            <ul class="socialIcons__list">
+                <li><a href="#"><img src="../img/twitterIcon.svg" alt="Twitter"></a></li>
+                <li><a href="#"><img src="../img/facebookIcon.svg" alt="Facebook"></a></li>
+                <li><a href="#"><img src="../img/instagramIcon.svg" alt="Instagram"></a></li>
+                <li><a href="#"><img src="../img/youtubeIcon.svg" alt="Youtube"></a></li>
+            </ul>
+        </section>
+        <!-- Newsletter -->
+        <section id="mailingList">
+            <form action="" class="form">
+                <label for="email" class="form__label">¡Suscribite al newsletter!</label>
+                <input type="email" name="email" placeholder="ejemplo@gmail.com" class="form__input form__email">
+                <input type="submit" value="ENVIAR" class="form__input form__submit">
+            </form>
+        </section>
+        <section id="bottomContainer" class="bottomContainer"> <!-- Contiene tres columnas -->
+            <div class="bottomContainer__left">
+                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
+                    <img src="../img/map.jpg" alt="Google Maps" class="footerMap">
+                </a>
+            </div>
+            <div class="bottomContainer__center">
+                <nav class="footerMenu">
+                    <ul class="footerMenu__list">
+                        <li class="footerMenu__item"><a href="../index.html">Inicio</a></li>
+                        <li class="footerMenu__item"><a href="#">Menu</a></li>
+                        <li class="footerMenu__item"><a href="./eventos.html">Eventos</a></li>
+                        <li class="footerMenu__item"><a href="./nosotros.html">Nosotros</a></li>
+                        <li class="footerMenu__item"><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <p class="contactInfo">
+                    12 de Octubre 1428<br>
+                    (esq. O'Connor)<br>
+                    Bariloche, Arg.<br><br>
+                    +54 9 2944 537802
+                </p>
+            </div>
+            <div class="bottomContainer__right">
+                <h2>Le Pancherie</h2>
+                <p>Le Pancherie © Todos los derechos reservados</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
