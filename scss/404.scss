@@ -1,0 +1,51 @@
+@import "./partials/reset";
+@import "./partials/variables";
+
+body {
+    background-color: $primary;
+    color: $textLight;
+    text-align: center;
+}
+
+.error {
+    &__number {
+        font-family: $fontTitle;
+        font-size: 2rem;
+    }
+    &__title {
+        font-family: $fontTitle;
+        font-size: 4rem;
+        margin-bottom: 0.75em;
+    }
+    &__desc {
+        font-family: $fontPrimary;
+        font-size: 1.25rem;
+    }
+    &__cta {
+        @extend .error__desc;
+        // display: inline-block;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 2em;
+        border: 1px $textLight solid;
+        padding: 0.5em 1.5em;
+        border-radius: 1.5em;
+        text-decoration: none;
+        &:visited {
+            color: $textLight;
+        }
+        &:hover {
+            background-color: $textLight;
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 1rem;
+}

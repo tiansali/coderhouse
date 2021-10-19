@@ -1,0 +1,31 @@
+// Media queries
+@mixin mq_smallDesktop {
+    @media screen and (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin mq_tablet {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin mq_mobile {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+// menu.scss
+@mixin placeTitle($top){
+    position: absolute;
+    top: $top;
+    background-color: $customBackground;
+    padding: 0 1em;
+    border-radius: 1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+}
