@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&family=Sarina&display=swap');
+
+body {
+    margin: 0;
+}
+
+main {
+    background-color: #FFF6E8;
+    color: #484242;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/****************************************
+
+    HEADER
+
+****************************************/
+
+.headerGlobal {
+    background: #F09B1A;
+    background: radial-gradient(circle, #ffb444, #e59316);
+    color: white;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.headerGlobal a, .headerGlobal a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.headerGlobal a:hover {
+    color: #BA4200;
+}
+
+.headerGlobal h1 {
+    font-family: 'Sarina', cursive;
+    font-size: 3rem;
+}
+
+.headerMenu__list {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.headerLogo {
+    max-width: 200px;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+}
+
+
+/****************************************
+
+    FOOTER
+
+****************************************/
+
+.socialIcons {
+    background-color: #FFF6E8;
+    text-align: center;
+}
+
+.socialIcons__list {
+    list-style: none;
+}
+
+.socialIcons__list img {
+    max-height: 30px;
+    opacity: 80%;
+}
+
+.socialIcons__list img:hover {
+    opacity: 90%;
+}
+
+.mailingList {
+    background-color: #F09B1A;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.mailingList input[type=email], .mailingList input[type=submit] {
+    border: none;
+    border-radius: 3px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.bottomContainer {
+    background-color: #302E2C;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footerMenu__list {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.footerMenu__list a, .footerMenu__list a:visited, .footer__contactInfo {
+    color: white;
+    opacity: 50%;
+    text-decoration: none;
+}
+
+.footerMenu__list a:hover {
+    opacity: 70%;
+}
+
+.footer__contactInfo {
+    font-size: 0.75rem;
+}
+
+.right h2 {
+    font-family: 'Sarina', cursive;
+    font-size: 2rem;
+}
+
+.right p {
+    font-size: .65rem;
+}
