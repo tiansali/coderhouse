@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&family=Sarina&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #FFF6E8;
+    color: #484242;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/****************************************
+
+    HEADER
+
+****************************************/
+.headerGlobal {
+    background: #F09B1A;
+    background: radial-gradient(circle, #ffb444, #e59316);
+    color: white;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.15);
+    text-align: center;
+
+    position: sticky;
+    top: calc(-200px - 11.2rem);
+}
+
+.headerGlobal a, .headerGlobal a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.headerGlobal a:hover {
+    color: #BA4200;
+}
+
+.headerGlobal h1 {
+    font-family: 'Sarina', cursive;
+    font-size: 3rem;
+    padding: 5rem 0 2rem 0;
+}
+
+.headerLogo {
+    max-width: 200px;
+    padding-bottom: 5rem;
+}
+
+.headerMenu__list {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.headerMenu__list li {
+    display: inline-block;
+}
+
+.headerMenu__list a {
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+/* Submenu */
+
+.headerMenu__list .menu {
+    position: relative;
+}
+
+.subMenu {
+    position: absolute;
+    display: none;
+}
+
+.subMenu li {
+    display: block;
+    background-color: #f3a52f;
+    font-size: 1rem;
+}
+
+.headerMenu__list .menu:hover .subMenu {
+    display: block;
+}
+
+
+
+/****************************************
+
+    MAIN
+
+****************************************/
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+}
+
+
+
+/****************************************
+
+    FOOTER
+
+****************************************/
+
+            /* Social Icons */
+
+.socialIcons {
+    background-color: #FFF6E8;
+    text-align: center;
+
+    padding: 4rem 1rem 1rem 1rem;
+}
+
+.socialIcons__list {
+    list-style: none;
+}
+
+.socialIcons__list li {
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.socialIcons__list img {
+    height: 30px;
+    opacity: 70%;
+}
+
+.socialIcons__list img:hover {
+    opacity: 90%;
+}
+
+            /* Suscripcion al newsletter */
+
+.mailingList {
+    background-color: #F09B1A;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+
+    padding: 1.5rem;
+}
+
+.mailingList label {
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.mailingList input[type=email], .mailingList input[type=submit] {
+    border: none;
+    border-radius: 3px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+
+    height: 2rem;
+}
+
+.mailingList input[type=email] {
+    min-width: 14rem;
+    padding: 0 1rem;
+}
+
+.mailingList input[type=submit] {
+    background-color: #F09B1A;
+    color: white;
+    border: 1px solid white;
+    padding: 0 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.mailingList input[type=submit]:hover {
+    background-color: white;
+    color: #F09B1A;
+    cursor: pointer;
+}
+
+            /* Pie de pagina */
+
+.bottomContainer {
+    background-color: #302E2C;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.bottomContainer .left, .bottomContainer .center, .bottomContainer .right {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottomContainer .left {
+    width: 50%;
+}
+
+.bottomContainer .left img {
+    width: 100%;
+}
+
+.bottomContainer .center {
+    padding: 1rem;
+}
+
+.footerMenu__list {
+    list-style: none;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footerMenu__list li {
+    padding-bottom: 0.15rem;
+}
+
+.footerMenu__list a, .footerMenu__list a:visited, .footer__contactInfo {
+    color: white;
+    opacity: 50%;
+    text-decoration: none;
+}
+
+.footerMenu__list a:hover {
+    opacity: 70%;
+}
+
+.footer__contactInfo {
+    font-size: 0.75rem;
+}
+
+.bottomContainer .right {
+    text-align: center;
+}
+
+.bottomContainer .right h2 {
+    font-family: 'Sarina', cursive;
+    font-size: 2rem;
+}
+
+.bottomContainer .right p {
+    font-size: .65rem;
+    opacity: 70%;
+}
