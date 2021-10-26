@@ -1,0 +1,32 @@
+@import "./partials/_reset";
+@import "./partials/_variables";
+@import "./partials/_mixins";
+@import "./partials/_global";
+
+///////////////////////////////////////
+//          NOSOTROS MAIN
+//
+body {
+    text-align: center;
+}
+
+.boton {
+    border: 2px solid $secondary;
+    color: $secondary;
+    font-weight: 700;
+    font-family: $fontTitle;
+    padding: 2rem 1.25rem;
+    width: 7rem;
+    height: 7rem;
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    border-radius: 3em;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color, background-color 150ms ease-in-out;
+    &:hover {
+        color: $backgroundMain;
+        background-color: $secondary;
+    }
+}

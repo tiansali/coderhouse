@@ -31,13 +31,14 @@ body {
         padding: 0.5em 1.5em;
         border-radius: 1.5em;
         text-decoration: none;
+        transition: color, background-color 150ms ease-in-out;
         &:visited {
             color: $textLight;
         }
         &:hover {
             background-color: $textLight;
             color: $primary;
-            font-weight: 600;
+            font-weight: 500;
         }
     }
 }
