@@ -24,7 +24,7 @@ body {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.15);
     position: sticky;
     z-index: 99;
-    top: calc(-200px - 11.2rem);
+    top: calc(-200px - 11.1rem);
 
     a, a:visited {
         color: $textLight;
@@ -37,7 +37,9 @@ body {
     .headerType {
         font-family: $fontTitle;
         font-size: 3rem;
+        line-height: normal;
         padding: 5rem 0 2rem 0;
+        margin: 0;
     }
     .headerLogo {
         max-width: 200px;
@@ -109,7 +111,7 @@ main {
 
 //      > Social Icons
 
-.socialIcons {
+footer .socialIcons {
     background-color: $backgroundMain;
     text-align: center;
     padding: 1rem;
@@ -275,7 +277,7 @@ main {
     #headerGlobal {
         top: calc(-150px - 10.2rem);
 
-        h1{
+        .headerType{
             font-size: 2rem;
         }
         .headerLogo {

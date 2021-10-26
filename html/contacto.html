@@ -11,7 +11,7 @@
     <!-- Bootstrap 5 files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- Custom styles -->
-    <link rel="stylesheet" href="../css/globalStyles.min.css">
+    <link rel="stylesheet" href="../css/contacto.min.css">
 </head>
 <body>
     <!----------------------------------
@@ -42,59 +42,86 @@
                 CUERPO PRINCIPAL> contacto.html
     ------------------------------------>
     <main>
-        <h1>CONTACTO</h1>
-    </main>
-    <!----------------------------------
-                FOOTER GLOBAL
-    ------------------------------------>
-    <footer id="footerGlobal">
-        <!-- Social Icons -->
-        <section id="socialIcons" class="socialIcons">
-            <ul class="socialIcons__list">
-                <li><a href="#"><img src="../img/twitterIcon.svg" alt="Twitter"></a></li>
-                <li><a href="#"><img src="../img/facebookIcon.svg" alt="Facebook"></a></li>
-                <li><a href="#"><img src="../img/instagramIcon.svg" alt="Instagram"></a></li>
-                <li><a href="#"><img src="../img/youtubeIcon.svg" alt="Youtube"></a></li>
-            </ul>
-        </section>
-        <!-- Newsletter -->
-        <section id="mailingList">
-            <form action="" class="form">
-                <label for="email" class="form__label">¡Suscribite al newsletter!</label>
-                <input type="email" name="email" placeholder="ejemplo@gmail.com" class="form__input form__email">
-                <input type="submit" value="ENVIAR" class="form__input form__submit">
-            </form>
-        </section>
-        <section id="bottomContainer" class="bottomContainer"> <!-- Contiene tres columnas -->
-            <div class="bottomContainer__left">
-                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
-                    <img src="../img/map.jpg" alt="Google Maps" class="footerMap">
-                </a>
+        <div class="pageHead">
+            <h1>Contacto & Reservas</h1>
+        </div>
+        <section id="card" class="card">
+            <div class="card__wrapper">
+                <img src="../img/map_contact.jpg" alt="Ubicación - mapa" class="card__map">
+                <div class="card__info">
+                    <div class="top">
+                        <div class="item">
+                            <img src="../img/ubicacion.svg" alt="Dirección" class="item__icon">
+                            <p class="item__title">Dirección</p>
+                            <p class="item__content">12 de Octubre 1428 (esquina O'Connor) <br>
+                                                     Bariloche, Argentina.</p>
+                        </div>
+                        <div class="item">
+                            <img src="../img/horarios.svg" alt="Horarios" class="item__icon">
+                            <p class="item__title">Horarios</p>
+                            <p class="item__content">Lunes a sábados: 11.00 a 15.00 hs <br>& 19.00 a 00.00 hs</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="item">
+                            <img src="../img/whatsapp.svg" alt="Teléfono" class="item__icon">
+                            <p class="item__title">Teléfono</p>
+                            <p class="item__content item__content--lg">+54 9 294 4537802</p>
+                        </div>
+                        <div class="item">
+                            <img src="../img/arroba.svg" alt="Correo Electrónico" class="item__icon">
+                            <p class="item__title">Correo electrónico</p>
+                            <p class="item__content item__content--lg">contacto@lepancherie.com.ar</p>
+                        </div>
+                        <ul class="socialIcons">
+                            <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
+                            <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
+                            <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
+                            <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="bottomContainer__center">
-                <nav class="footerMenu">
-                    <ul class="footerMenu__list">
-                        <li class="footerMenu__item"><a href="../index.html">Inicio</a></li>
-                        <li class="footerMenu__item"><a href="./menu.html">Menu</a></li>
-                        <li class="footerMenu__item"><a href="./eventos.html">Eventos</a></li>
-                        <li class="footerMenu__item"><a href="./nosotros.html">Nosotros</a></li>
-                        <li class="footerMenu__item"><a href="#">Contacto</a></li>
+        </section>
+        <section id="form" class="form">
+            <div class="form__wrapper">
+                <p class="form__title"><span class="line">¡Contanos cómo </span><span class="line">podemos ayudarte!</span></p>
+                <form action="">
+                    <label for="nombre" class="form__label">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre" class="form__input form__input--text nombre" required>
+                    <label for="email" class="form__label">Correo electrónico</label>
+                    <input type="email" name="email" placeholder="ejemplo@lepancherie.com.ar" class="form__input form__input--text email" required>
+                    <label for="newsletter" class="form__label form__label--checkbox"><input type="checkbox" name="newsletter" class="form__input--checkbox">Me gustaría recibir noticias y cupones de descuento</label>
+                    <label for="telefono" class="form__label">Telefono</label>
+                    <input type="text" name="telefono" placeholder="+54 9 2944660608" class="form__input form__input--number telefono" required>
+                    <label for="motivo" class="form__label form__label--dropdown">Motivo de la consulta</label>
+                    <select name="motivo" id="motivo" aria-placeholder="Seleccione un motivo" required>
+                        <option value="" disabled selected>-- Seleccione un motivo --</option>
+                        <option value="">Reservas</option>
+                        <option value="">Eventos</option>
+                        <option value="">Propuesta de negocios</option>
+                        <option value="">Otro</option>
+                    </select>
+                    <label for="mensaje" class="form__label form__label--text">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                    <input type="submit" value="Enviar" class="form__input form__input--submit">
+                </form>
+                <footer class="footer">
+                    <img src="../img/logo_colored.png" alt="Le Pancherie" class="footer__logo">
+                    <h2 class="footer__isotype">Le Pancherie</h2>
+                    <p class="footer__copy">Le Pancherie © Todos los derechos reservados</p>
+                    <ul class="footer__socialIcons">
+                        <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
+                        <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
+                        <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
+                        <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
                     </ul>
-                </nav>
-                <p class="contactInfo">
-                    12 de Octubre 1428<br>
-                    (esq. O'Connor)<br>
-                    Bariloche, Arg.<br><br>
-                    +54 9 2944 537802
-                </p>
-            </div>
-            <div class="bottomContainer__right">
-                <h2>Le Pancherie</h2>
-                <p>Le Pancherie © Todos los derechos reservados</p>
+                </footer>
             </div>
         </section>
-    </footer>
 
+    </main>
+    
     <!-- Bootstrap Js Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </body>
