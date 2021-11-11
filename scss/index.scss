@@ -9,37 +9,74 @@
 
 main {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 
 //      > Hero
 
 .hero {
+    background: #232221;
     font-family: $fontSecondary;
     font-style: italic;
     font-size: 1.75rem;
     line-height: 230%;
-    padding: 7rem 3rem;
-    max-width: 50rem;
-    margin: 0 auto;
+    padding-bottom: 2rem;
+    position: relative;
 
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background: url(../img/triangulo-negro.svg) no-repeat center top;
+        width: 100%;
+        height: 100px;
+        top: 100%;
+        left: 0;
+    }
     &__text {
-        margin-bottom: 6rem;
+        display: inline-block;
+        position: relative;
+        background-color: $backgroundMain;
+        margin: auto;
+        margin-bottom: 7rem;
+        padding: 3rem 5rem 1rem 5rem;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: url(../img/triangulo-blanco.svg) no-repeat center top;
+            width: 100%;
+            height: 100px;
+            top: 100%;
+            left: 0;
+        }
     }
     &__slogan {
-        display: inline-block;
-        color: $secondaryStrong;
+        margin-bottom: 1rem;
+        line-height: normal;
+        font-size: 2.5rem;
+        color: $primary;
         font-weight: 700;
+        
+        .rojo {
+            color: $secondaryStrong;
+        }
     }
 }
 
+.imgPancho {
+    width: 100%;
+}
 
 //      > Testimonials
 
 #testimonials {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 2rem 0 6rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
 }
@@ -62,31 +99,76 @@ main {
 //      > Call to action
 
 .cta {
-    background-color: $backgroundLight;
-    padding: 10rem 2rem;
+    background-color: $backgroundDark;
+    color:$textLight;
+    // padding: 0 ;
 
+    &__bannerTop {
+        background: url(../img/banner-top.jpg) no-repeat center/cover;
+        height: 15rem;
+        margin-bottom: 5rem;
+        position: relative;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: url(../img/banner-topper.svg) no-repeat center top;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__bannerBottom {
+        background: url(../img/banner-bottom.jpg) no-repeat center/cover;
+        height: 15rem;
+        margin-top: 5rem;
+        position: relative;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: url(../img/banner-bottomer.svg) no-repeat center bottom;
+            width: 100%;
+            height: 100px;
+            bottom: -1px;
+            left: 0;
+        }
+    }
     &__text {
         font-family: $fontSecondary;
         font-size: 2rem;
         margin-bottom: 5rem;
         &--color {
             display: inline-block;
-            color: $secondaryStrong;
+            color: $primary;
         }
     }
     &__button,
     &__button:visited {
-        color: $secondaryStrong;
+        display: inline-block;
+        color: $primary;
         font-size: 1.5rem;
         text-decoration: none;
-        border: 1px solid $secondaryStrong;
+        border: 1px solid $primary;
         border-radius: 5px;
         padding: 1rem 2rem;
         transition: background-color 150ms ease-out, color 150ms ease-out;
+        margin-bottom: 1rem;
     }
     &__button:hover {
-        background-color: $secondaryStrong;
-        color: $textLight;
+        background-color: $primary;
+        color: $textDark;
+        font-weight: 500;
+    }
+    &__menu {
+        font-size: 1.25rem;
+        a,
+        a:visited {
+            color: $textLight;
+        }
     }
 }
 
