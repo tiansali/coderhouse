@@ -90,7 +90,7 @@ main {
         &--picante::after {
             content: '';
             position: absolute;
-            z-index: 99;
+            z-index: 9;
             right: -23px;
             top: 4px;
             width: 20px;
@@ -100,7 +100,7 @@ main {
         &--vegetariano::after {
             content: '';
             position: absolute;
-            z-index: 99;
+            z-index: 9;
             right: -23px;
             top: 4px;
             width: 20px;
