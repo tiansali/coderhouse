@@ -17,6 +17,30 @@
     }
 }
 
+// Media queries mobile first
+
+// de 500 para arriba
+@mixin mf_tablet {
+    @media screen and (min-width: 500px){
+        @content;
+    }
+}
+
+// de 768 para arriba
+@mixin mf_smallDesktop {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+// de 1024 para arriba
+@mixin mf_largeDesktop {
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+
 // menu.scss
 @mixin placeTitle($top){
     position: absolute;

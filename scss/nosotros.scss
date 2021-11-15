@@ -3,30 +3,148 @@
 @import "./partials/_mixins";
 @import "./partials/_global";
 
+// INDICE
+// 11.  Main
+// 36.  Texto
+// 60.  Media queries
+
 ///////////////////////////////////////
 //          NOSOTROS MAIN
 //
-body {
+
+main {
     text-align: center;
+    padding: 3rem 1rem;
+
+    img {
+        max-width: 100%;
+        margin: 1rem 0;
+        border-radius: 1rem;
+    }
+    p {
+        max-width: 30rem;
+    }
 }
 
-.boton {
-    border: 2px solid $secondary;
-    color: $secondary;
-    font-weight: 700;
-    font-family: $fontTitle;
-    padding: 2rem 1.25rem;
-    width: 7rem;
-    height: 7rem;
-    display: inline-block;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    border-radius: 3em;
-    line-height: 1.8;
-    text-decoration: none;
-    transition: color, background-color 150ms ease-in-out;
-    &:hover {
-        color: $backgroundMain;
-        background-color: $secondary;
+.top,
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Texto
+.head {
+    margin-bottom: 2rem;
+
+    &__subtitle {
+        display: inline-block;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+.text__title {
+    margin: 1rem auto;
+    max-width: 30rem;
+}
+.text__body {
+    text-align: left;
+    line-height: 1.6;
+
+    a {
+        color: $secondaryStrong;
+    }
+}
+
+///////////////////////////////////////
+//          MEDIA QUERIES
+//
+
+@include mf_tablet {
+    main {
+        padding: 5rem 3rem;
+    }
+    .head__subtitle {
+        font-size: 1.35rem;
+    }
+    .text__title {
+        text-align: left;
+    }
+    .text__body {
+        font-size: 1.1rem;
+    }
+
+}
+
+@include mf_smallDesktop {
+    .head {
+        margin-bottom: 5rem;
+        &__subtitle {
+            font-size: 1.4rem;
+        }
+    }
+    .top {
+        display: block;
+        padding-bottom: 2rem;
+        
+        .text__body {
+            margin: 1rem auto;
+        }
+        &__img {
+            float: left;
+            shape-outside: circle();
+            padding-right: 2rem;
+            max-width: 350px;
+        }
+    }
+    .bottom {
+        flex-direction: row;
+        justify-content: end;
+        align-items: flex-start;
+
+        &__text {
+            max-width: 60%;
+            margin-right: 2rem;
+        }
+        &__imgWrapper {
+            width: 40%;
+            align-self: stretch;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        &__img--vertical {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+@include mf_largeDesktop {
+    .head__subtitle {
+        font-size: 1.5rem;
+    }
+    .text__body {
+        font-size: 1.2rem;
+    }
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__img {
+            float: none;
+            max-width: 40%;
+            padding-right: 5rem;
+        }
+    }
+    .bottom {
+        align-items: flex-start;
+    }
+    .bottom__text {
+        max-width: 60%;
+        margin: 3rem auto;
     }
 }

@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&family=Sarina&display=swap');
 @import "./mixins";
 
+// INDICE
+// 10.  Estilos globales
+// 21.  Header
+// 97.  Main
+// 111. Footer
+
 ///////////////////////////////////////
 //          ESTILOS GLOBALES
 //
@@ -24,7 +30,7 @@ body {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.15);
     position: sticky;
     z-index: 99;
-    top: calc(-200px - 11.1rem);
+    top: calc(-150px - 10rem);
 
     a, a:visited {
         color: $textLight;
@@ -36,23 +42,20 @@ body {
     }
     .headerType {
         font-family: $fontTitle;
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: normal;
         padding: 5rem 0 2rem 0;
         margin: 0;
     }
     .headerLogo {
-        max-width: 200px;
-        padding-bottom: 5rem;
+        max-width: 150px;
+        padding-bottom: 4rem;
     }
 }
 
 .headerMenu__list {
     font-size: 1.25rem;
     font-weight: 500;
-    // list-style: none;
-    // display: flex;
-    // justify-content: center;
 
     a {
         display: inline-block;
@@ -148,6 +151,7 @@ footer .socialIcons {
     .form {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         
         &__label {
             display: inline-block;
@@ -156,7 +160,8 @@ footer .socialIcons {
             border: none;
             border-radius: 3px;
             font-size: 1rem;
-            margin-left: 1rem;
+
+            margin: 1rem 0 0 0;
             height: 2rem;
         }
         &__email {
@@ -188,9 +193,11 @@ footer .socialIcons {
     color: $textLight;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
     &__left {
-        width: 50%;
+        width: 100%;
+        height: 15rem;
         overflow: hidden;
         position: relative;
 
@@ -205,9 +212,20 @@ footer .socialIcons {
     }
     &__center {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
+        width: 100%;
+        flex-flow: row-reverse;
+        align-items: center;
+
+        nav {
+            padding-left: 2rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.411);
+            margin-left: 2rem;
+        }
+        ul {
+            padding-bottom: 0;
+        }
     }
     &__right {
         padding: 2rem;
@@ -216,6 +234,7 @@ footer .socialIcons {
         justify-content: center;
         text-align: center;
         flex: 1;
+        background-color: black;
 
         h2 {
             font-family: $fontTitle;
@@ -293,69 +312,73 @@ footer .socialIcons {
 //          MEDIA QUERIES
 //
 
-@include mq_smallDesktop {
-    .bottomContainer {
-        flex-wrap: wrap;
-
-        &__left {
-            width: 70%;
-        }
-        &__center {
-            width: 30%;
-        }
-        &__right {
-            background-color: black;
-        }
-    }
-}
-
-@include mq_tablet {
-    #headerGlobal {
-        top: calc(-150px - 10rem);
-
-        .headerType{
-            font-size: 2rem;
-        }
-        .headerLogo {
-            max-width: 150px;
-            padding-bottom: 4rem;
-        }
-    }
-    #mailingList .form {
-        flex-direction: column;
-        
-        &__input {
-            margin: 1rem 0 0 0;
-        }
-    }
-    .bottomContainer__center {
-        padding: 3rem 1rem;
-    }
-}
-
-@include mq_mobile {
+// entre 500 y 768
+@include mf_tablet {
     .bottomContainer__left {
-        width: 100%;
-        height: 15rem;
-        order: 2;
+        order: 1;
+        width: 70%;
+        height: auto;
     }
     .bottomContainer__center {
-        width: 100%;
-        flex-flow: row-reverse;
-        align-items: center;
-        order: 1;
+        order: 2;
+        width: 30%;
+        flex-direction: column;
+        align-items: flex-start;
 
-        nav {
-            padding-left: 2rem;
-            border-left: 1px solid rgba(255, 255, 255, 0.411);
-            margin-left: 2rem;
-        }
-        ul {
-            padding-bottom: 0;
+        .footerMenu {
+            margin: 0;
+            padding: 0;
+            border: none;
+
+            &__list {
+                padding-bottom: 1rem;
+            }
         }
     }
     .bottomContainer__right {
         order: 3;
     }
+}
 
+// entre 1024 y 768
+@include mf_smallDesktop {
+    #headerGlobal {
+        top: calc(-200px - 11.1rem);
+
+        .headerType {
+            font-size: 3rem;
+        }
+        .headerLogo {
+            max-width: 200px;
+            padding-bottom: 5rem;
+        }
+    }
+    #mailingList .form {
+        flex-direction: row;
+        
+        &__input {
+            margin: 0 0 0 1rem;
+        }
+    }
+    .bottomContainer__center {
+        padding: 5rem 1rem;
+        
+    }
+}
+
+// mas de 1024
+@include mf_largeDesktop {
+    .bottomContainer {
+        flex-wrap: nowrap;
+    
+        &__left {
+            width: 50%;
+        }
+        &__center {
+            width: auto;
+        }
+        &__right {
+            background-color: $backgroundDark;
+        }
+    }
 }

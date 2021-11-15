@@ -6,6 +6,12 @@
 // Variables locales
 $bgLight: rgba(255, 255, 255, 0.5);
 
+// INDICE
+// 15.  Main
+// 28.  Informacion de contacto
+// 112. Formulario de contacto
+// 209. Media queries
+
 ///////////////////////////////////////
 //          CONTACTO MAIN
 //
@@ -13,32 +19,34 @@ $bgLight: rgba(255, 255, 255, 0.5);
 main {
     padding: 3rem 0rem;
     padding-bottom: 0;
-    // background-color: gray;
 }
 .pageHead {
     text-align: center;
     padding-bottom: 3rem;
 }
 
-//      > Seccion Contact Info
-
+// Seccion Informacion de contacto
 .card {
     background-color: $bgLight;
     border: none;
-    padding: 5rem;
+    padding: 1rem;
 
     &__wrapper {
         max-width: 1000px;
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
     &__map {
-        max-height: 24rem;
         border-radius: 0.8rem;
+        order: 2;
+        max-height: 18rem;
+        object-fit: cover;
     }
     &__info {
         padding: 0 1rem;
+        margin: 0 auto 2rem auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -48,15 +56,16 @@ main {
 
 .item {
     display: grid;
-    grid-template-columns: 2rem 1fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 
     &__icon {
-        grid-row: span 2;
+        grid-row: inherit;
         padding: 0.5rem;
-        max-width: 2.3rem;
+        max-width: 2rem;
+        justify-self: end;
     }
     &__title {
         text-transform: uppercase;
@@ -65,8 +74,9 @@ main {
         margin-left: 0.5rem;
     }
     &__content {
-        margin-left: .5rem;
-        margin-bottom: 0;
+        margin: 0;
+        grid-column: span 2;
+        text-align: center;
 
         &--lg {
             font-size: 1.1em;
@@ -80,6 +90,7 @@ main {
     display: flex;
     flex-direction: row;
     height: auto;
+    justify-content: center;
     padding: 0;
     padding-left: 0.5rem;
     margin-top: 2rem;
@@ -98,8 +109,7 @@ main {
     }
 }
 
-//      > Formulario
-
+// Formulario de contacto
 .form {
     background: rgb(58,56,54);
     background: radial-gradient(circle, rgba(58,56,54,1) 0%, rgba(35,34,33,1) 100%);
@@ -131,7 +141,7 @@ main {
         width: 14rem;
     }
     .email {
-        width: 19rem;
+        width: 15.5rem;
     }
     .telefono {
         width: 12rem;
@@ -144,9 +154,7 @@ main {
         margin-bottom: 1rem;
     }
     &__input--checkbox {
-        // margin: 0rem 0.5rem 2rem 0;
         margin-right: 0.5rem;
-        // margin-bottom: 2rem;
     }
     &__input,
     textarea,
@@ -198,47 +206,47 @@ main {
     display: block;
 }
 
-//      > Media queries
+///////////////////////////////////////
+//          MEDIA QUERIES
+//
 
-@include mq_tablet {
+@include mf_tablet {
     .card {
-        &__wrapper {
-            flex-direction: column;
+        padding: 5rem;
+    }
+    .item {
+            
+        grid-template-columns: 2rem 1fr;
+        margin: 0 0 1rem 0;
+
+        &__icon {
+            grid-row: span 2;
+            max-width: 2.3rem;
         }
-        &__map {
-            order: 2;
-            max-height: 18rem;
-            object-fit: cover;
+        &__content {
+            grid-column: span 1;
+            margin-left: .5rem;
+            text-align: left
         }
-        &__info {
-            margin: 0 auto 2rem auto;
         }
+    .form .email {
+            width: 19rem;
     }
 }
 
-@include mq_mobile {
+@include mf_smallDesktop {
     .card {
-        padding: 1rem;
-    }
-    .item {
-        grid-template-columns: 2fr 3fr;
-        margin: 2rem 0;
-
-        &__icon {
-            grid-row: inherit;
-            max-width: 2rem;
-            justify-self: end;
+        &__wrapper {
+            flex-direction: row;
         }
-        &__content {
-            grid-column: span 2;
+        &__map {
+            order: 1;
+            max-height: 24rem;
+            object-fit: cover;
+        }
+        &__info {
             margin: 0;
-            text-align: center;
+            order: 2;
         }
-    }
-    .socialIcons {
-        justify-content: center;
-    }
-    .form .email {
-        width: 15.5rem;
     }
 }

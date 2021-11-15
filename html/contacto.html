@@ -7,7 +7,8 @@
     <title>Le Pancherie - Contacto</title>
     <meta name="keywords" content="reservar, reservas, contacto, telefono, email, mail, horarios">
     <meta name="description" content="Reservas y contacto. Contanos cómo podemos ayudarte.">
-    <link rel="icon" href="./img/browser-icon.png">
+    <!-- Browser Icon -->
+    <link rel="icon" href="../img/icons/browser-icon.png">
     <!-- Bootstrap 5 files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- Custom styles -->
@@ -16,11 +17,11 @@
 <body>
     <!----------------------------------
                 HEADER GLOBAL
-    -->
+    ------------------------------------>
     <header id="headerGlobal">
         <p class="headerType"> <a href="../index.html">Le Pancherie</a></p>
-        
-        <a href="../index.html"><img src="../img/logo.png" alt="Le Pancherie" class="headerLogo"></a>
+        <!-- Bootstrap Navbar -->
+        <a href="../index.html"><img src="../img/global/logo.png" alt="Le Pancherie" class="headerLogo"></a>
         <nav class="navbar navbar-light navbar-expand-md p-0">
             <div class="container-fluid justify-content-center p-0">
               <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,53 +40,58 @@
     </header>
     
     <!----------------------------------
-                CUERPO PRINCIPAL> contacto.html
+                CUERPO PRINCIPAL
     ------------------------------------>
     <main>
+        <!-- Titulo -->
         <div class="pageHead">
             <h1>Contacto & Reservas</h1>
         </div>
+        <!-- Info de contacto -->
         <section id="card" class="card">
             <div class="card__wrapper">
-                <img src="../img/map_contact.jpg" alt="Ubicación - mapa" class="card__map">
+                <img src="../img/global/map_contact.jpg" alt="Ubicación - mapa" class="card__map">
                 <div class="card__info">
                     <div class="top">
                         <div class="item">
-                            <img src="../img/ubicacion.svg" alt="Dirección" class="item__icon">
+                            <img src="../img/icons/ubicacion.svg" alt="Dirección" class="item__icon">
                             <p class="item__title">Dirección</p>
                             <p class="item__content">12 de Octubre 1428 (esquina O'Connor) <br>
                                                      Bariloche, Argentina.</p>
                         </div>
                         <div class="item">
-                            <img src="../img/horarios.svg" alt="Horarios" class="item__icon">
+                            <img src="../img/icons/horarios.svg" alt="Horarios" class="item__icon">
                             <p class="item__title">Horarios</p>
                             <p class="item__content">Lunes a sábados: 11.00 a 15.00 hs <br>& 19.00 a 00.00 hs</p>
                         </div>
                     </div>
                     <div class="bottom">
                         <div class="item">
-                            <img src="../img/whatsapp.svg" alt="Teléfono" class="item__icon">
+                            <img src="../img/icons/whatsapp.svg" alt="Teléfono" class="item__icon">
                             <p class="item__title">Teléfono</p>
                             <p class="item__content item__content--lg">+54 9 294 4537802</p>
                         </div>
                         <div class="item">
-                            <img src="../img/arroba.svg" alt="Correo Electrónico" class="item__icon">
+                            <img src="../img/icons/arroba.svg" alt="Correo Electrónico" class="item__icon">
                             <p class="item__title">Correo electrónico</p>
                             <p class="item__content item__content--lg">contacto@lepancherie.com.ar</p>
                         </div>
                         <ul class="socialIcons">
-                            <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
-                            <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
-                            <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
-                            <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
+                            <li><img src="../img/icons/instagramIcon.svg" alt="Instagram"></li>
+                            <li><img src="../img/icons/twitterIcon.svg" alt="Twitter"></li>
+                            <li><img src="../img/icons/youtubeIcon.svg" alt="Youtube"></li>
+                            <li><img src="../img/icons/facebookIcon.svg" alt="Facebook"></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Seccion inferior -->
         <section id="form" class="form">
             <div class="form__wrapper">
                 <p class="form__title"><span class="line">¡Contanos cómo </span><span class="line">podemos ayudarte!</span></p>
+                <!-- Formulario de contacto -->
                 <form action="">
                     <label for="nombre" class="form__label">Nombre</label>
                     <input type="text" name="nombre" placeholder="Tu nombre" class="form__input form__input--text nombre" required>
@@ -106,15 +112,16 @@
                     <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
                     <input type="submit" value="Enviar" class="form__input form__input--submit">
                 </form>
+                <!-- Pie de pagina -->
                 <footer class="footer">
-                    <a href="../index.html"><img src="../img/logo_colored.png" alt="Le Pancherie" class="footer__logo"></a>
+                    <a href="../index.html"><img src="../img/global/logo_colored.png" alt="Le Pancherie" class="footer__logo"></a>
                     <h2 class="footer__isotype">Le Pancherie</h2>
                     <p class="footer__copy">Le Pancherie © Todos los derechos reservados</p>
                     <ul class="footer__socialIcons">
-                        <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
-                        <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
-                        <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
-                        <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
+                        <li><img src="../img/icons/instagramIcon.svg" alt="Instagram"></li>
+                        <li><img src="../img/icons/twitterIcon.svg" alt="Twitter"></li>
+                        <li><img src="../img/icons/youtubeIcon.svg" alt="Youtube"></li>
+                        <li><img src="../img/icons/facebookIcon.svg" alt="Facebook"></li>
                     </ul>
                 </footer>
             </div>

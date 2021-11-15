@@ -7,7 +7,8 @@
     <title>Le Pancherie - Menu</title>
     <meta name="keywords" content="pancho, panchos gourmet, carta, menu">
     <meta name="description" content="Explora nuestra variedad de panchos gourmet, o diseña tu propio pancho.">
-    <link rel="icon" href="./img/browser-icon.png">
+    <!-- Browser Icon -->
+    <link rel="icon" href="../img/icons/browser-icon.png">
     <!-- Bootstrap 5 files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- Custom styles -->
@@ -16,11 +17,11 @@
 <body>
     <!----------------------------------
                 HEADER GLOBAL
-    -->
+    ------------------------------------>
     <header id="headerGlobal">
         <p class="headerType"> <a href="../index.html">Le Pancherie</a></p>
-        <a href="../index.html"><img src="../img/logo.png" alt="Le Pancherie" class="headerLogo"></a>
-        
+        <a href="../index.html"><img src="../img/global/logo.png" alt="Le Pancherie" class="headerLogo"></a>
+        <!-- Bootstrap Navbar -->
         <nav class="navbar navbar-light navbar-expand-md p-0">
             <div class="container-fluid justify-content-center p-0">
               <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +54,9 @@
                      <p class="list__description">Salchicha tradicional en pan blanco clásico, papitas fritas y aderezos a elección.</p>
                  </li>
                  <!--  -->
+                 <li class="imgWrapper">
+                     <img src="../img/menu/5.jpg" alt="">
+                 </li>
                  <li>
                      <p class="list__burger">El parrillero</p>
                      <p class="list__description">Salchicha parrillera en pan casero, un toque de chimichurri, salsa criolla, papitas fritas y aderezos a elección.</p>
@@ -61,24 +65,33 @@
                      <p class="list__burger">Napolitano</p>
                      <p class="list__description">Salchicha tradiconal en pan blanco clásico, mozarella, olivas negras trituradas, albahaca fresca y aderezos a elección.</p>
                  </li>
-                 <!--  -->
                  <li>
-                     <p class="list__burger">ATR</p>
+                     <p class="list__burger list__burger--picante">ATR</p>
                      <p class="list__description">Salchicha experimental en pan casero, morrones asados, queso cheddar, jalapeños y aderezos a elección.</p>
-                 </li>
+                </li>
+                <!--  -->
+                <li class="imgWrapper">
+                    <img src="../img/menu/2.jpg" alt="">
+                </li>
+                <li>
+                    <p class="list__burger">El kohinoor</p>
+                    <p class="list__description">Salchicha tradicional en pan blanco clásico, panceta ahumada, queso blanco, queso parmesano, papitas fritas y aderezos a elección.</p>
+                </li>
+                <!--  -->
+                <li class="imgWrapper">
+                    <img src="../img/menu/3.jpg" alt="">
+                </li>
+                <!--  -->
                  <li>
-                     <p class="list__burger">El kohinoor</p>
-                     <p class="list__description">Salchicha tradicional en pan blanco clásico, panceta ahumada, queso blanco, queso parmesano, papitas fritas y aderezos a elección.</p>
-                 </li>
-                 <!--  -->
-                 <!--  -->
-                 <li>
-                     <p class="list__burger">Cortito y al pie</p>
+                     <p class="list__burger list__burger--picante">Cortito y al pie</p>
                      <p class="list__description">Salchicha experimental de la casa en pan blanco extraliviano, pepinillos agridulces, parmesano y aderezos a elección.</p>
                  </li>
                  <!--  -->
+                 <li class="imgWrapper">
+                    <img src="../img/menu/1.jpg" alt="">
+                </li>
                  <li>
-                     <p class="list__burger">El mexicano</p>
+                     <p class="list__burger list__burger--picante">El mexicano</p>
                      <p class="list__description">Salchicha experimental en pan casero, guacamole, jalapeños, cebolla de verdeo, papitas fritas y aderezos a elección.</p>
                  </li>
                  <li>
@@ -86,13 +99,16 @@
                      <p class="list__description">Salchicha alemana ahumada en pan blanco extra liviano, cebolla morada caramelizada, queso azul, panceta ahumada, papitas fritas y aderezos a elección.</p>
                  </li>
                  <li>
-                     <p class="list__burger">Casi Diet</p>
+                     <p class="list__burger list__burger--vegetariano">Casi Diet</p>
                      <p class="list__description">Salchicha vegana en pan de salvado, chucrut de repollo morado, queso blanco, zanahorias grilladas, mix de semillas y aderezos a elección.</p>
                  </li>
+                 <!--  -->
+                 <li class="imgWrapper">
+                    <img src="../img/menu/4.jpg" alt="">
+                </li>
                  <li>
-                     <p class="list__burger">Vegancho</p>
+                     <p class="list__burger list__burger--vegetariano">Vegancho</p>
                      <p class="list__description">Salchicha vegana en pan de salvado, baba ganoush, cilantro fresco, mix de semillas y aderezos a elección.</p>
-                 </li>
              </ul>
         </section>
 
@@ -175,12 +191,9 @@
                 <input type="submit" value="ENVIAR" class="form__input form__submit">
             </form>
         </section>
-        <section id="bottomContainer" class="bottomContainer"> <!-- Contiene tres columnas -->
-            <div class="bottomContainer__left">
-                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
-                    <img src="../img/map.jpg" alt="Google Maps" class="footerMap">
-                </a>
-            </div>
+        <!-- Pie de pagina -->
+        <section id="bottomContainer" class="bottomContainer">
+            <!-- 1er contianer -->
             <div class="bottomContainer__center">
                 <nav class="footerMenu">
                     <ul class="footerMenu__list">
@@ -198,15 +211,22 @@
                     +54 9 2944 537802
                 </p>
             </div>
+            <!-- 2do container -->
+            <div class="bottomContainer__left">
+                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
+                    <img src="../img/global/map.jpg" alt="Google Maps" class="footerMap">
+                </a>
+            </div>
+            <!-- 3er container -->
             <div class="bottomContainer__right footer">
-                <img src="../img/logo_colored.png" alt="Le Pancherie" class="footer__logo">
+                <img src="../img/global/logo_colored.png" alt="Le Pancherie" class="footer__logo">
                 <h2 class="footer__isotype">Le Pancherie</h2>
                 <p class="footer__copy">Le Pancherie © Todos los derechos reservados</p>
                 <ul class="footer__socialIcons">
-                    <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
-                    <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
-                    <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
-                    <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
+                    <li><img src="../img/icons/instagramIcon.svg" alt="Instagram"></li>
+                    <li><img src="../img/icons/twitterIcon.svg" alt="Twitter"></li>
+                    <li><img src="../img/icons/youtubeIcon.svg" alt="Youtube"></li>
+                    <li><img src="../img/icons/facebookIcon.svg" alt="Facebook"></li>
                 </ul>
             </div>
         </section>

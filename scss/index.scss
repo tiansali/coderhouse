@@ -3,6 +3,13 @@
 @import "./partials/_mixins";
 @import "./partials/_global";
 
+// INDICE
+// 13.  Main
+// 24.  Hero
+// 85.  Testimonials
+// 110. Call to action
+// 193. Media queries
+
 ///////////////////////////////////////
 //          INDEX MAIN
 //
@@ -20,16 +27,16 @@ main {
     background: #232221;
     font-family: $fontSecondary;
     font-style: italic;
-    font-size: 1.75rem;
+    font-size: 1.15rem;
     line-height: 230%;
-    padding-bottom: 2rem;
+    padding: 0 1rem 2rem 1rem;
     position: relative;
 
     &::after {
         display: block;
         position: absolute;
         content: '';
-        background: url(../img/triangulo-negro.svg) no-repeat center top;
+        background: url(../img/index/triangulo-negro.svg) no-repeat center top;
         width: 100%;
         height: 100px;
         top: 100%;
@@ -41,13 +48,13 @@ main {
         background-color: $backgroundMain;
         margin: auto;
         margin-bottom: 7rem;
-        padding: 3rem 5rem 1rem 5rem;
+        padding: 3rem 1rem 0 1rem;
 
         &::after {
             display: block;
             position: absolute;
             content: '';
-            background: url(../img/triangulo-blanco.svg) no-repeat center top;
+            background: url(../img/index/triangulo-blanco.svg) no-repeat center top;
             width: 100%;
             height: 100px;
             top: 100%;
@@ -57,7 +64,7 @@ main {
     &__slogan {
         margin-bottom: 1rem;
         line-height: normal;
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         color: $primary;
         font-weight: 700;
         
@@ -66,28 +73,32 @@ main {
         }
     }
 }
-
+.imgContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
 .imgPancho {
-    width: 100%;
+    width: 200%;
 }
 
 //      > Testimonials
 
 #testimonials {
-    max-width: 1024px;
     margin: 0 auto;
     padding: 2rem 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonialCard {
     padding: 2rem;
-    max-width: 30%;
-    vertical-align: middle;
+    max-width: 100%;
 
     &__img {
-        max-height: 150px;
+        max-height: 200px;
     }
     &__text {
         padding-top: 1rem;
@@ -101,19 +112,17 @@ main {
 .cta {
     background-color: $backgroundDark;
     color:$textLight;
-    // padding: 0 ;
 
     &__bannerTop {
-        background: url(../img/banner-top.jpg) no-repeat center/cover;
-        height: 15rem;
-        margin-bottom: 5rem;
+        background: url(../img/index/banner-top.jpg) no-repeat center/cover;
+        height: 10rem;
         position: relative;
 
-        &::after {
+        &::after { // Topper curvo (arriba)
             display: block;
             position: absolute;
             content: '';
-            background: url(../img/banner-topper.svg) no-repeat center top;
+            background: url(../img/index/banner-topper.svg) no-repeat center top;
             width: 100%;
             height: 100px;
             top: 0;
@@ -121,26 +130,28 @@ main {
         }
     }
     &__bannerBottom {
-        background: url(../img/banner-bottom.jpg) no-repeat center/cover;
-        height: 15rem;
-        margin-top: 5rem;
+        background: url(../img/index/banner-bottom.jpg) no-repeat center/cover;
+        height: 10rem;
         position: relative;
 
-        &::after {
+        &::after { // Topper curvo (abajo)
             display: block;
             position: absolute;
             content: '';
-            background: url(../img/banner-bottomer.svg) no-repeat center bottom;
+            background: url(../img/index/banner-bottomer.svg) no-repeat center bottom;
             width: 100%;
             height: 100px;
             bottom: -1px;
             left: 0;
         }
     }
+    &__middleContainer {
+        padding: 3rem 2rem;
+    }
     &__text {
         font-family: $fontSecondary;
-        font-size: 2rem;
-        margin-bottom: 5rem;
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
         &--color {
             display: inline-block;
             color: $primary;
@@ -150,7 +161,7 @@ main {
     &__button:visited {
         display: inline-block;
         color: $primary;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         text-decoration: none;
         border: 1px solid $primary;
         border-radius: 5px;
@@ -164,10 +175,16 @@ main {
         font-weight: 500;
     }
     &__menu {
-        font-size: 1.25rem;
+        font-size: 1.15;
         a,
         a:visited {
             color: $textLight;
+            opacity: 0.8;
+            transition: opacity 150ms ease-in-out;
+        }
+        a:hover,
+        a:active {
+            opacity: 1;
         }
     }
 }
@@ -177,27 +194,82 @@ main {
 //          MEDIA QUERIES
 //
 
-@include mq_tablet {
+@include mf_tablet {
     .hero {
         font-size: 1.5rem;
-    }
-    #testimonials {
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-    }
-    .testimonialCard {
-        max-width: 100%;
 
-        &__img {
-            max-height: 250px;
-            max-width: 80%;
+        &__text {
+            padding: 3rem 3rem 1rem 3rem;
+        }
+        &__slogan {
+            font-size: 2.2rem;
         }
     }
-    .cta__text {
-        font-size: 1.5rem;
+    .imgPancho {
+        width: 150%;
     }
-    .cta__button {
-        font-size: 1.25rem;
+}
+
+@include mf_smallDesktop {
+    .hero {
+        font-size: 1.75rem;
+
+        &__text {
+            padding: 3rem 5rem 1rem 5rem;
+        }
+        &__slogan {
+            font-size: 2.5rem;
+        }
+    }
+    .imgPancho {
+        width: 100%;
+    }
+    #testimonials {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .testimonialCard {
+        max-width: 30%;
+    }
+    .cta {
+        &__bannerTop,
+        &__bannerBottom {
+            height: 15rem;
+        }
+        &__middleContainer {
+            padding: 5rem 2rem;
+        }
+        &__text {
+            font-size: 2rem;
+            padding-bottom: 4rem;
+        }
+        &__button {
+            font-size: 1.5rem;
+        }
+        &__menu {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@include mf_largeDesktop {
+    .hero {
+        font-size: 1.85rem;
+
+        &__text {
+            padding: 5rem 7rem 3rem 7rem;
+        }
+        &__slogan {
+            font-size: 3rem;
+            margin: 2rem 0;
+        }
+    }
+    .cta {
+        &__middleContainer {
+            padding-top: 7rem;
+        }
+        &__text {
+            font-size: 2.5rem;
+        }
     }
 }

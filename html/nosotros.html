@@ -7,7 +7,8 @@
     <title>Le Pancherie - Nosotros</title>
     <meta name="keywords" content="le pancherie, nosotros, historia">
     <meta name="description" content="Conocé un poco sobre nosotros y nuestra historia.">
-    <link rel="icon" href="./img/browser-icon.png">
+    <!-- Browser Icon -->
+    <link rel="icon" href="../img/icons/browser-icon.png">
     <!-- Bootstrap 5 files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- Custom styles -->
@@ -16,11 +17,11 @@
 <body>
     <!----------------------------------
                 HEADER GLOBAL
-    -->
+    ------------------------------------>
     <header id="headerGlobal">
         <p class="headerType"> <a href="../index.html">Le Pancherie</a></p>
-        <a href="../index.html"><img src="../img/logo.png" alt="Le Pancherie" class="headerLogo"></a>
-        
+        <a href="../index.html"><img src="../img/global/logo.png" alt="Le Pancherie" class="headerLogo"></a>
+        <!-- Bootstrap Navbar -->
         <nav class="navbar navbar-light navbar-expand-md p-0">
             <div class="container-fluid justify-content-center p-0">
               <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,11 +40,38 @@
     </header>
     
     <!----------------------------------
-                CUERPO PRINCIPAL> eventos.html
+                CUERPO PRINCIPAL
     ------------------------------------>
     <main>
-        <h1>Página en construccion</h1>
-        <a href="../html/404.html" class="boton">404</a>
+        <!-- Titulo -->
+        <div class="head">
+            <h1 class="head__title">Sobre nosotros</h1>
+            <p class="head__subtitle">Conocé quienes somos y</p>
+            <p class="head__subtitle">cuál es nuestra historia</p>
+        </div>
+
+        <!-- Seccion superior -->
+        <section class="top">
+            <img src="../img/nosotros/francisco.png" alt="Francisco Durand" class="top__img">
+            <div class="top__text">
+                <h3 class="text__title">Pancho Fundador</h3>
+                <p class="text__body">Todo comenzó un martes del año 1983, cuando en un golpe de suerte, y con un historial de adicción al juego, Francisco Durand se gana la Quiniela. En vida, Pancho siempre relataba: “Me acuerdo que era un martes porque la vieja hizo empanadas”.</p>
+                <p class="text__body">Con poco que perder y sumergido en deudas potencialmente perjudiciales para su salud, decide alejarse de la capital por un tiempo. Un domingo de ese mismo año, con lo puesto y un bolso de mano, Pancho llega a Bariloche. En vida, siempre relataba: “Me acuerdo que era domingo porque estaba todo cerrado”.</p>
+                <p class="text__body">Es allí donde invierte su dinero y el resto de sus días y abre un pequeño sucucho barrial bajo el nombre “Lo del Pancho”. Mal iluminado, con poca ventilación, algunas mesas de patio y, la joya del lugar: una mesa de pool; Lo del Pancho era el lugar de encuentro del barrio. Uno no iba a comer, iba a estar. Francisco nunca se hizo rico, pero vivió feliz y tuvo dos hijos que pudo hacer estudiar.</p>
+            </div>
+        </section>
+        <img src="../img/nosotros/pedroypablo1.jpg" alt="Pedro y Pablo Durand" class="bottom__img bottom__img--horizontal">
+        <!-- Seccion inferior -->
+        <section class="bottom">
+            <div class="bottom__text">
+                <h3 class="text__title">Pancho 2.0</h3>
+                <p class="text__body">Pedro y Pablo Durand crecieron respirando vapor de salchicha y cortando cubitos de tomate, pero nunca les pesó. Al contrario. Si acaso, heredaron la pasión por la comida de su padre. Ambos estudiantes de gastronomía: Pedro en el <abbr title="Instituto Argentino de Gastronomía"><a href="http://www.iag.com.ar/" target="_blank">I.A.G.</a></abbr> de Buenos Aires; Pablo, becado en <a href="https://www.cordonbleu.edu/home/es" target="_blank">Le Cordon Bleu</a> de Paris.</p>
+                <p class="text__body">En el año 2001, Pancho muere y el local pasa a ser una ferretería. Tres años más tarde, los hermanos vuelven a Bariloche y, en homenaje a su padre, abren Le Pancherie: un local gastronómico de excelencia especializado en perros calientes con una afinidad por la experimentación, pero sobre todo, un hogar para la comunidad.</p>
+            </div>
+            <div class="bottom__imgWrapper">
+                <img src="../img/nosotros/pedroypablo1.jpeg" alt="Pedro y Pablo Durand" class="bottom__img bottom__img--vertical">
+            </div>
+        </section>
     </main>
     <!----------------------------------
                 FOOTER GLOBAL
@@ -57,12 +85,9 @@
                 <input type="submit" value="ENVIAR" class="form__input form__submit">
             </form>
         </section>
-        <section id="bottomContainer" class="bottomContainer"> <!-- Contiene tres columnas -->
-            <div class="bottomContainer__left">
-                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
-                    <img src="../img/map.jpg" alt="Google Maps" class="footerMap">
-                </a>
-            </div>
+        <!-- Pie de pagina -->
+        <section id="bottomContainer" class="bottomContainer">
+            <!-- 1er columna -->
             <div class="bottomContainer__center">
                 <nav class="footerMenu">
                     <ul class="footerMenu__list">
@@ -80,15 +105,22 @@
                     +54 9 2944 537802
                 </p>
             </div>
+            <!-- 2da columna -->
+            <div class="bottomContainer__left">
+                <a href="https://www.google.com.ar/maps/place/Mostaza/@-41.1335233,-71.3093962,20.22z/data=!4m5!3m4!1s0x961a7b228a40a977:0x7c646f7ca0258d2c!8m2!3d-41.1336923!4d-71.3091775" target="_blank">
+                    <img src="../img/global/map.jpg" alt="Google Maps" class="footerMap">
+                </a>
+            </div>
+            <!-- 3er columna -->
             <div class="bottomContainer__right footer">
-                <img src="../img/logo_colored.png" alt="Le Pancherie" class="footer__logo">
+                <img src="../img/global/logo_colored.png" alt="Le Pancherie" class="footer__logo">
                     <h2 class="footer__isotype">Le Pancherie</h2>
                     <p class="footer__copy">Le Pancherie © Todos los derechos reservados</p>
                     <ul class="footer__socialIcons">
-                        <li><img src="../img/instagramIcon.svg" alt="Instagram"></li>
-                        <li><img src="../img/twitterIcon.svg" alt="Twitter"></li>
-                        <li><img src="../img/youtubeIcon.svg" alt="Youtube"></li>
-                        <li><img src="../img/facebookIcon.svg" alt="Facebook"></li>
+                        <li><img src="../img/icons/instagramIcon.svg" alt="Instagram"></li>
+                        <li><img src="../img/icons/twitterIcon.svg" alt="Twitter"></li>
+                        <li><img src="../img/icons/youtubeIcon.svg" alt="Youtube"></li>
+                        <li><img src="../img/icons/facebookIcon.svg" alt="Facebook"></li>
                     </ul>
             </div>
         </section>
